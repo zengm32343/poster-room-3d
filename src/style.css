@@ -1,0 +1,40 @@
+:root {
+  font: 16px/1.45 "Instrument Sans", system-ui, sans-serif;
+  color: #282920;
+  background: #f6f3ea;
+  color-scheme: light;
+  accent-color: #46523c;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1140px; margin: 0 auto; padding: 28px 24px; }
+h1 { font: 500 clamp(2rem, 5vw, 3.5rem)/1.05 "Instrument Serif", Georgia, serif; margin: 0; letter-spacing: -.035em; }
+header p { margin: 8px 0 20px; color: #59594b; }
+.viewer { position: relative; border: 1px solid #d5d0c4; border-radius: 14px; overflow: hidden; background: #ece7dc; }
+#room { height: clamp(330px, 61vh, 630px); background: #ded9cf; position: relative; }
+#room canvas { display: block; width: 100%; height: 100%; position: absolute; inset: 0; cursor: grab; }
+#room canvas:active { cursor: grabbing; }
+#status { position: absolute; inset: 12px auto auto 12px; background: #fffaf0; padding: 8px 12px; margin: 0; border-radius: 8px; }
+.controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 24px; padding: 12px 16px 16px; }
+fieldset { display: flex; gap: 4px; padding: 0; margin: 0; border: 0; }
+legend { font-size: 13px; padding: 0 0 5px; }
+button, .upload {
+  background: #f9f6ec; border: 1px solid #c9c4b6; border-radius: 7px;
+  color: inherit; cursor: pointer; font: inherit; font-size: 14px; padding: 7px 10px;
+}
+button[aria-pressed="true"] { background: #46523c; color: white; border-color: #46523c; }
+.extra { display: flex; gap: 12px 16px; flex-wrap: wrap; align-items: center; font-size: 14px; }
+.zoom { display: flex; gap: 6px; align-items: center; }
+.zoom input { width: 86px; }
+.upload { position: relative; }
+.upload input { position: absolute; inset: 0; width: 100%; opacity: 0; cursor: pointer; }
+.upload:focus-within { outline: 2px solid #46523c; outline-offset: 2px; }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 18px; color: #59594b; font-size: 14px; padding-top: 12px; }
+a { color: #3d573e; text-underline-offset: 3px; }
+@media (max-width: 600px) {
+  main { padding: 17px 12px; }
+  #room { height: clamp(320px, 52vh, 530px); }
+  .controls { padding: 10px 9px 12px; gap: 10px; }
+  .extra { gap: 7px 10px; }
+  button, .upload { padding: 6px 8px; }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="An interactive Three.js room for previewing a tiled poster at its real size." />
+    <title>Poster Room 3D</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Poster Room 3D</h1>
+        <p>Preview a six-sheet poster at 57 × 45.2 cm.</p>
+      </header>
+      <section class="viewer" aria-label="Interactive poster preview">
+        <div id="room" aria-label="3D living room"></div>
+        <p id="status" role="status">Loading room…</p>
+        <div class="controls">
+          <fieldset>
+            <legend>View</legend>
+            <button data-view="room" aria-pressed="true">Room</button>
+            <button data-view="front" aria-pressed="false">Close-up</button>
+            <button data-view="side" aria-pressed="false">Side</button>
+          </fieldset>
+          <fieldset>
+            <legend>Frame</legend>
+            <button data-frame="none" aria-pressed="true">None</button>
+            <button data-frame="oak" aria-pressed="false">Oak</button>
+            <button data-frame="black" aria-pressed="false">Black</button>
+          </fieldset>
+          <div class="extra">
+            <label class="zoom">Zoom <input id="zoom" type="range" min="0" max="100" value="0" /></label>
+            <label><input id="evening" type="checkbox" /> Evening light</label>
+            <label class="upload">Choose image<input id="image" type="file" accept="image/*" /></label>
+          </div>
+        </div>
+      </section>
+      <footer><span>Drag to orbit. Scroll or pinch to zoom.</span><a href="https://rasterbator.online/">Make a printable poster in Rasterbator Studio ↗</a></footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="904" viewBox="0 0 1140 904">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#172e40"/>
+      <stop offset=".69" stop-color="#b78c64"/>
+      <stop offset="1" stop-color="#f6d698"/>
+    </linearGradient>
+    <linearGradient id="water" x2="0" y2="1">
+      <stop stop-color="#476e75"/>
+      <stop offset="1" stop-color="#193b49"/>
+    </linearGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".53" numOctaves="3" seed="9"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".15"/></feComponentTransfer>
+      <feBlend in2="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h1140v904H0z"/>
+    <circle cx="793" cy="354" r="105" fill="#f7d999"/>
+    <path fill="#637c7a" d="M0 597 125 487 225 519 362 392 435 431 586 318 714 469 767 444 877 530 1036 411 1140 482v422H0Z"/>
+    <path fill="#455e66" d="m0 579 112-145 72 30 119-162 96 81 79 86 75-31 160 105 79 30 169-109 179 39v401H0Z"/>
+    <path fill="url(#water)" d="m0 661 213-37 137 23 174-18 114 14 156-29 346 42v248H0Z"/>
+    <path fill="#e3c798" opacity=".53" d="m707 656 185 1-102 7Zm-82 36 355 7-333 4Zm138 38 201 7-296 2Z"/>
+    <path fill="#8ea5a0" opacity=".5" d="m82 690 230-14-117 12Zm27 70 433-22-209 27Zm444 50 398-13-250 22Z"/>
+    <path fill="#253c42" d="M0 702q133 29 252 99L376 904H0Zm1140 25q-152 36-227 177h227Z"/>
+    <path fill="#d7b17f" opacity=".6" d="m10 207 241-28 113 15-151 7Zm708 16 247-27 111 16-113-5Z"/>
+  </g>
+</svg>
